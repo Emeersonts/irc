@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdditionalNetworkDiscount.Discount.Invalid" xml:space="preserve">
+    <value>Percentual do desconto inválido.</value>
+  </data>
+  <data name="AdditionalNetworkDiscount.EAN.Invalid" xml:space="preserve">
+    <value>EAN de produto com desconto adicional inválido.</value>
+  </data>
+  <data name="AdditionalNetworkDiscount.EAN.Null" xml:space="preserve">
+    <value>O EAN do produto com desconto adicional é requerido.</value>
+  </data>
+  <data name="AdditionalNetworkDiscount.FiscalNumberRoot.Invalid" xml:space="preserve">
+    <value>Raiz do CNPJ inválida.</value>
+  </data>
+  <data name="AdditionalNetworkDiscount.FiscalNumberRoot.Null" xml:space="preserve">
+    <value>A raiz do CNPJ da rede é requerida</value>
+  </data>
+  <data name="AdditionalNetworkDiscount.StateCode.Null" xml:space="preserve">
+    <value>O Estado onde será aplicado o desconto adicional é requerido.</value>
+  </data>
+  <data name="AssociatedCampaign.AssociatedCampaignId.Invalid" xml:space="preserve">
+    <value>Código da campanha associada inválido.</value>
+  </data>
+  <data name="Campaign.AcquirerCode.Invalid" xml:space="preserve">
+    <value>O código da administrador é requerido.</value>
+  </data>
+  <data name="Campaign.AdhrenceModel.Invalid" xml:space="preserve">
+    <value>Canal de adesão inválido.</value>
+  </data>
+  <data name="Campaign.AdhrenceModel.Null" xml:space="preserve">
+    <value>O tipo de dados de adesão é requerido</value>
+  </data>
+  <data name="Campaign.BeginDate.Invalid" xml:space="preserve">
+    <value>A data de início da campanha é requerida.</value>
+  </data>
+  <data name="Campaign.BeginDate.OutOfRange" xml:space="preserve">
+    <value>A data de término da campanha deve ser superior a data de início</value>
+  </data>
+  <data name="Campaign.BillKitNumberOfDays.OutOfRange" xml:space="preserve">
+    <value>Informe se a campanha é do tipo OneShot, e se for. o seu período.</value>
+  </data>
+  <data name="Campaign.EndDate.BelowMinValue" xml:space="preserve">
+    <value>A data fim não pode ser menor que a data atual.</value>
+  </data>
+  <data name="Campaign.EndDate.Invalid" xml:space="preserve">
+    <value>A data de término da campanha é requerida.</value>
+  </data>
+  <data name="Campaign.EndDateForPurchase.Invalid" xml:space="preserve">
+    <value>A data final para compra é requerida.</value>
+  </data>
+  <data name="Campaign.EndDateForPurchase.OutOfRange" xml:space="preserve">
+    <value>A data final da compra deve ser superior a data de início</value>
+  </data>
+  <data name="Campaign.MaximumNumberOfParticipants.OutOfRange" xml:space="preserve">
+    <value>O número máximo de participantes deve ser maior que 0.</value>
+  </data>
+  <data name="Campaign.Name.Null" xml:space="preserve">
+    <value>O nome da campanha é requerido.</value>
+  </data>
+  <data name="Campaign.Null" xml:space="preserve">
+    <value>A campanha não pode ser nula</value>
+  </data>
+  <data name="Campaign.ProductQuantityLevelId.Invalid" xml:space="preserve">
+    <value>O tipo de patamar é requerido.</value>
+  </data>
+  <data name="Campaign.Program.Invalid" xml:space="preserve">
+    <value>O programa é requerido.</value>
+  </data>
+  <data name="Campaign.UserName.Null" xml:space="preserve">
+    <value>O nome do usuário é requerido.</value>
+  </data>
+  <data name="Combo.Discount1.Invalid" xml:space="preserve">
+    <value>Valor do desconto do primeiro produto inválido.</value>
+  </data>
+  <data name="Combo.Discount2.Invalid" xml:space="preserve">
+    <value>Valor do desconto do segundo produto inválido.</value>
+  </data>
+  <data name="Combo.EAN1.Invalid" xml:space="preserve">
+    <value>O EAN do primeiro produto do combo é inválido.</value>
+  </data>
+  <data name="Combo.EAN1.Null" xml:space="preserve">
+    <value>O EAN do primeiro produto do combo é requerido.</value>
+  </data>
+  <data name="Combo.EAN2.Invalid" xml:space="preserve">
+    <value>O EAN do segundo produto do combo é inválido.</value>
+  </data>
+  <data name="Combo.EAN2.Null" xml:space="preserve">
+    <value>O EAN do segundo produto do combo é requerido.</value>
+  </data>
+  <data name="Combo.IdCampaign2.Invalid" xml:space="preserve">
+    <value>O código da campanha ao qual o combo foi associado é inválido.</value>
+  </data>
+  <data name="ComboBrands.Discount1.Invalid" xml:space="preserve">
+    <value>Desconto por marca do primeiro produto inválido.</value>
+  </data>
+  <data name="ComboBrands.Discount2.Invalid" xml:space="preserve">
+    <value>Desconto por marca do segundo produto inválido.</value>
+  </data>
+  <data name="ComboBrands.IdCampaign.Invalid" xml:space="preserve">
+    <value>O código da campanha é requerido.</value>
+  </data>
+  <data name="ComboBrands.IdProductBrand1.Invalid" xml:space="preserve">
+    <value>Marca do primeiro produto inválida.</value>
+  </data>
+  <data name="ComboBrands.IdProductBrand1.Null" xml:space="preserve">
+    <value>A marca do primeiro produto é requerida.</value>
+  </data>
+  <data name="ComboBrands.IdProductBrand2.Invalid" xml:space="preserve">
+    <value>Marca do segundo produto inválida.</value>
+  </data>
+  <data name="ComboBrands.IdProductBrand2.Null" xml:space="preserve">
+    <value>A marca do segundo produto é requerida.</value>
+  </data>
+  <data name="ComboBrands.Quantity1.Invalid" xml:space="preserve">
+    <value>Quantidade do primeiro produto inválida.</value>
+  </data>
+  <data name="ComboBrands.Quantity2.Invalid" xml:space="preserve">
+    <value>Quantidade do seguindo produto inválida.</value>
+  </data>
+  <data name="Kit.Discount.Invalid" xml:space="preserve">
+    <value>Desconto do kit inválido.</value>
+  </data>
+  <data name="Kit.EAN.Invalid" xml:space="preserve">
+    <value>EAN do produto associado ao kit é inválido.</value>
+  </data>
+  <data name="Kit.EAN.Null" xml:space="preserve">
+    <value>O EAN do produto associado ao kit é requerido.</value>
+  </data>
+  <data name="Kit.Quantity.Invalid" xml:space="preserve">
+    <value>Quantidade de produtos no kit inválida.</value>
+  </data>
+  <data name="MigratedCampaign.CampaignMigrationId.Invalid" xml:space="preserve">
+    <value>Código da campanha a ser migrada inválido.</value>
+  </data>
+  <data name="MonthlyDiscount.Discount.Invalid" xml:space="preserve">
+    <value>Desconto mensal inválido.</value>
+  </data>
+  <data name="Network.FiscalNumberRoot.Invalid" xml:space="preserve">
+    <value>Raíz do CNPJ de indústria é obrigatório.</value>
+  </data>
+  <data name="Network.FiscalNumberRoot.Null" xml:space="preserve">
+    <value>A raiz do CNPJ da rede é requerida.</value>
+  </data>
+  <data name="Channel.Name.Null" xml:space="preserve">
+    <value>O nome do canal é requerido.</value>
+  </data>
+  <data name="Physician.CRM.Invalid" xml:space="preserve">
+    <value>CRM inválido.</value>
+  </data>
+  <data name="Physician.StateCode.Null" xml:space="preserve">
+    <value>O estado do médido é requerido.</value>
+  </data>
+  <data name="Product.BrandId.Invalid" xml:space="preserve">
+    <value>Marca do produto inválida.</value>
+  </data>
+  <data name="Product.Discount.Invalid" xml:space="preserve">
+    <value>Valor do desconto do produto inválido.</value>
+  </data>
+  <data name="Product.DiscountType.Invalid" xml:space="preserve">
+    <value>Tipo de desconto do produto inválido.</value>
+  </data>
+  <data name="Product.EAN.Invalid" xml:space="preserve">
+    <value>EAN do produto inválido.</value>
+  </data>
+  <data name="Product.EAN.Null" xml:space="preserve">
+    <value>O EAN do produto é obrigatório.</value>
+  </data>
+  <data name="Product.MaxQuantity.Invalid" xml:space="preserve">
+    <value>Quantidade máxima de produtos inválida.</value>
+  </data>
+  <data name="Product.States.Null" xml:space="preserve">
+    <value>Os produtos da campanha devem ser associados a um ou mais estados e a uma ou mais cidades.</value>
+  </data>
+  <data name="Threshold.Discount.Invalid" xml:space="preserve">
+    <value>Desconto no patamar inválido.</value>
+  </data>
+  <data name="Threshold.Quantity.Invalid" xml:space="preserve">
+    <value>A quantidade final deve ser maior que a quantidade inicial dos produtos com desconto.</value>
+  </data>
+  <data name="UnitaryDiscount.Discount.Invalid" xml:space="preserve">
+    <value>Desconto unitário inválido.</value>
+  </data>
+  <data name="UnitaryDiscount.Quantity.Invalid" xml:space="preserve">
+    <value>A quantidade final deve ser maior que a quantidade inicial dos produtos com desconto.</value>
+  </data>
+  <data name="User.ColorSchema.IsNullOrWhiteSpace" xml:space="preserve">
+    <value>A cor é obrigatória.</value>
+  </data>
+  <data name="User.IdSCS.IsNullOrWhiteSpace" xml:space="preserve">
+    <value>O Id SCS é obrigatório.</value>
+  </data>
+  <data name="User.Login.IsNullOrWhiteSpace" xml:space="preserve">
+    <value>O login é obrigatório.</value>
+  </data>
+  <data name="User.Name.IsNullOrWhiteSpace" xml:space="preserve">
+    <value>O nome é obrigatório.</value>
+  </data>
+  <data name="User.Password.IsNullOrWhiteSpace" xml:space="preserve">
+    <value>A senha é obrigatória.</value>
+  </data>
+  <data name="Approval.AcquirerCode.Uninformed" xml:space="preserve">
+    <value>Código da Administradora deve ser informado.</value>
+  </data>
+  <data name="Approval.Description.Uninformed" xml:space="preserve">
+    <value>Informar o motivo da recusa</value>
+  </data>
+  <data name="UserProfile.CompanyName.IsNullOrWhiteSpace" xml:space="preserve">
+    <value>Empresa obrigatória.</value>
+  </data>
+  <data name="UserProfile.Edit.User.Error" xml:space="preserve">
+    <value>Erro ao adicionar usuário.</value>
+  </data>
+  <data name="UserProfile.Save.New.User.Error" xml:space="preserve">
+    <value>Erro ao adicionar novo usuário.</value>
+  </data>
+  <data name="UserProfile.UserName.IsNullOrWhiteSpace" xml:space="preserve">
+    <value>Nome do usuário é requerida.</value>
+  </data>
+  <data name="Network.Null" xml:space="preserve">
+    <value>Os dados são obrigatórios.</value>
+  </data>
+  <data name="Network.AcquirerCode.Invalid" xml:space="preserve">
+    <value>O código da administradora é requerido.</value>
+  </data>
+  <data name="Network.NetworkName.Null" xml:space="preserve">
+    <value>O nome da rede é requerido.</value>
+  </data>
+  <data name="Physician.StateCode.Invalid" xml:space="preserve">
+    <value>Estado inválido.</value>
+  </data>
+  <data name="Physician.Type.Invalid" xml:space="preserve">
+    <value>Tipo de profissional inválido.</value>
+  </data>
+  <data name="Physician.Type.Null" xml:space="preserve">
+    <value>Tipo de profissional é requerido.</value>
+  </data>
+  <data name="Combo.EAN1.InvalidProduct" xml:space="preserve">
+    <value>O primeiro produto do combo deve fazer parte dos produtos da campanha.</value>
+  </data>
+  <data name="Combo.Invalid.NoProducts" xml:space="preserve">
+    <value>O combo deve conter produtos.</value>
+  </data>
+  <data name="Invalid.Administrator.Code" xml:space="preserve">
+    <value>Código de administradora inválido.</value>
+  </data>
+  <data name="Invalid.Brand" xml:space="preserve">
+    <value>Marca inválida</value>
+  </data>
+  <data name="Invalid.EAN" xml:space="preserve">
+    <value>EAN inválido</value>
+  </data>
+  <data name="User.Acquirers.null" xml:space="preserve">
+    <value>Informar a industria</value>
+  </data>
+  <data name="User.Roles.null" xml:space="preserve">
+    <value>Informar o papel do usuário</value>
+  </data>
+  <data name="Network.FiscalNumberRoot.Inconsistent" xml:space="preserve">
+    <value>A campanha deve ter pelo menos um desconto adicional por rede com a mesma raiz de CNPJ das redes associadas.</value>
+  </data>
+  <data name="Questionnaire.Questions.Answers.Null" xml:space="preserve">
+    <value>A questão deve ter pelo menos uma resposta.</value>
+  </data>
+  <data name="Questionnaire.Questions.Answers.Text.Null" xml:space="preserve">
+    <value>O texto da resposta é requerido</value>
+  </data>
+  <data name="Questionnaire.Brand.Invalid" xml:space="preserve">
+    <value>A marca do produto associada ao questionário é requerida.</value>
+  </data>
+  <data name="Questionnaire.Questions.Null" xml:space="preserve">
+    <value>As questões do questionário são requeridas.</value>
+  </data>
+  <data name="Questionnaire.Questions.Text.Null" xml:space="preserve">
+    <value>O texto da questão é requerido.</value>
+  </data>
+  <data name="Campaign.Coupon.MaxValue.Incosistent" xml:space="preserve">
+    <value>O valor máximo do range deve ser maior que o mínimo.</value>
+  </data>
+  <data name="Campaign.Coupon.MaxValue.Invalid" xml:space="preserve">
+    <value>O valor máximo do range do cupom deve ser maior que 0.</value>
+  </data>
+  <data name="Campaign.Coupon.MinValue.Invalid" xml:space="preserve">
+    <value>O valor mínimo do range do cupom deve ser maior que 0.</value>
+  </data>
+  <data name="Questionnaire.Questions.Answer.Weight.Invalid" xml:space="preserve">
+    <value>Todas as respostas das questões do questionário devem ter um peso.</value>
+  </data>
+  <data name="Questionnaire.Rules.CampaignId.Invalid" xml:space="preserve">
+    <value>O código da campanha da regra de associaçao deve ser maior que 0.</value>
+  </data>
+  <data name="Questionnaire.Rules.From.Invalid" xml:space="preserve">
+    <value>O valor final da regra de associação dever ser maior que 0.</value>
+  </data>
+  <data name="Questionnaire.Rules.Null" xml:space="preserve">
+    <value>O questionário deve ter um critério para associação com outras campanhas.</value>
+  </data>
+  <data name="Questionnaire.Rules.To.Invalid" xml:space="preserve">
+    <value>O valor inicial da regra de associação deve ser maior que 0 e menor que o valor final.</value>
+  </data>
+  <data name="Questionnaire.Questions.Empty" xml:space="preserve">
+    <value>O questionário deve conter questões.</value>
+  </data>
+  <data name="Campaign.ThresholdControl.Invalid" xml:space="preserve">
+    <value>Valor de controle de patamar inválido.</value>
+  </data>
+  <data name="Questionnaire.Brand.NotAlllowed" xml:space="preserve">
+    <value>A marca escolhida para este questionário já foi utilizada em outro questionário da mesma administradora.</value>
+  </data>
+  <data name="CreateCampaign.Error" xml:space="preserve">
+    <value>Erro na criação da campanha.</value>
+  </data>
+  <data name="Campaign.Create.Error" xml:space="preserve">
+    <value>Erro ao criar campanha: {0}</value>
+  </data>
+  <data name="Questionnaire.Questions.Answers.Default.Invalid" xml:space="preserve">
+    <value>O questionário só pode ter uma resposta default para cada pergunta.</value>
+  </data>
+  <data name="Questionnaire.Questions.Answers.MaxLimit.Exceeded" xml:space="preserve">
+    <value>Cada questão pode ter no máximo dez respostas.</value>
+  </data>
+  <data name="UserProfile.Active.User.Error" xml:space="preserve">
+    <value>Erro ao ativar/desativar usuário</value>
+  </data>
+  <data name="User.Not.Active" xml:space="preserve">
+    <value>Usuário Inativo</value>
+  </data>
+  <data name="User.Not.Roles" xml:space="preserve">
+    <value>Perfil não encontrado.</value>
+  </data>
+  <data name="Kit.Product.Duplicate" xml:space="preserve">
+    <value>O kit não pode conter produtos duplicados.</value>
+  </data>
+  <data name="Product.States.Cities.Null" xml:space="preserve">
+    <value>O produto deve ter pelo menos uma cidade selecionada.</value>
+  </data>
+  <data name="Campaign.Id.Invalid" xml:space="preserve">
+    <value>Id de campanha inválido.</value>
+  </data>
+  <data name="Campaign.User.Invalid" xml:space="preserve">
+    <value>O nome do usuário que esta alterando a campanha é obrigatório.</value>
+  </data>
+  <data name="Campaign.Draft.NotExists" xml:space="preserve">
+    <value>Não é possível editar esta campanha, pois ela não existe na base de dados.</value>
+  </data>
+  <data name="UserProfile.NotFound" xml:space="preserve">
+    <value>Perfil não encontrado.</value>
+  </data>
+  <data name="User.Password.null" xml:space="preserve">
+    <value>O password é requerido.</value>
+  </data>
+  <data name="User.ExternalKey.Invalid" xml:space="preserve">
+    <value>Id SCS inválido.</value>
+  </data>
+  <data name="User.Password.Invalid" xml:space="preserve">
+    <value>A senha é requerida.</value>
+  </data>
+  <data name="User.UserKey.Invalid" xml:space="preserve">
+    <value>Id de usuário inválido.</value>
+  </data>
+  <data name="User.NotFound" xml:space="preserve">
+    <value>Usuário não encontrado.</value>
+  </data>
+  <data name="User.NewPassword.invalid" xml:space="preserve">
+    <value>O novo password não pode ser igual ao anterior.</value>
+  </data>
+  <data name="Permission.Code.Null" xml:space="preserve">
+    <value>O código da permissão é requerido.</value>
+  </data>
+  <data name="Permission.Key.Invalid" xml:space="preserve">
+    <value>Id da permissão inválido.</value>
+  </data>
+  <data name="Permission.Name.Null" xml:space="preserve">
+    <value>O nome da permissão é requerido.</value>
+  </data>
+  <data name="Permission.RoleKey.Invalid" xml:space="preserve">
+    <value>Id da role inválido.</value>
+  </data>
+  <data name="Permission.RoleKey.Null" xml:space="preserve">
+    <value>O id da role é requerido.</value>
+  </data>
+  <data name="Permission.NotFound" xml:space="preserve">
+    <value>Permissão não encontrada.</value>
+  </data>
+  <data name="Role.NotFound" xml:space="preserve">
+    <value>Role não encontrada.</value>
+  </data>
+  <data name="Campaign.LastDate.OutOfRange" xml:space="preserve">
+    <value>A data de adesão deve ser maior que a data de início e menor que a de término.</value>
+  </data>
+  <data name="Module.Description.Null" xml:space="preserve">
+    <value>Informe a descrição do módulo</value>
+  </data>
+  <data name="Module.Image.Null" xml:space="preserve">
+    <value>Qual o endereço da imagem do módulo?</value>
+  </data>
+  <data name="Module.Name.Null" xml:space="preserve">
+    <value>Informe o nome do módulo</value>
+  </data>
+  <data name="Module.Null" xml:space="preserve">
+    <value>É necessário preencher as informações do modulo</value>
+  </data>
+  <data name="User.Login.InvalidEmail" xml:space="preserve">
+    <value>O login deve ser um endereço de e-mail válido.</value>
+  </data>
+  <data name="Module.New.Error" xml:space="preserve">
+    <value>Existe um modulo cadastrado com o mesmo nome!</value>
+  </data>
+</root>
