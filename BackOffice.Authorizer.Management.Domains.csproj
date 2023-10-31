@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44CF7AF7-7F41-4F32-86B1-5CC4E144AE8B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BackOffice.Authorizer.Management.Domains</RootNamespace>
+    <AssemblyName>BackOffice.Authorizer.Management.Domains</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="App.Metrics, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.3.0.0\lib\net452\App.Metrics.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Abstractions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Abstractions.3.0.0\lib\net45\App.Metrics.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Concurrency, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Concurrency.2.0.1\lib\net45\App.Metrics.Concurrency.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Core.3.0.0\lib\net452\App.Metrics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Formatters.Ascii, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Formatters.Ascii.3.0.0\lib\net452\App.Metrics.Formatters.Ascii.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Formatters.Json, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Formatters.Json.3.0.0\lib\net452\App.Metrics.Formatters.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Formatters.Prometheus, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Formatters.Prometheus.3.0.0\lib\net452\App.Metrics.Formatters.Prometheus.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.2.1.0\lib\net452\App.Metrics.Health.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Abstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Abstractions.2.1.0\lib\net452\App.Metrics.Health.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Checks.Http, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Checks.Http.2.1.0\lib\net452\App.Metrics.Health.Checks.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Checks.Network, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Checks.Network.2.1.0\lib\net452\App.Metrics.Health.Checks.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Checks.Process, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Checks.Process.2.1.0\lib\net452\App.Metrics.Health.Checks.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Checks.Sql, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Checks.Sql.2.1.0\lib\net452\App.Metrics.Health.Checks.Sql.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Core, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Core.2.1.0\lib\net452\App.Metrics.Health.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Formatters.Ascii, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Formatters.Ascii.2.1.0\lib\net452\App.Metrics.Health.Formatters.Ascii.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Formatters.Json, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Formatters.Json.2.1.0\lib\net452\App.Metrics.Health.Formatters.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac, Version=4.9.4.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.4\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Consul, Version=0.7.2.6, Culture=neutral, PublicKeyToken=20a6ad9a81df1d95, processorArchitecture=MSIL">
+      <HintPath>..\packages\Consul.0.7.2.6\lib\net45\Consul.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.1\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.Contrib.1.60.1\lib\net451\Dapper.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="dbup-core, Version=4.2.0.0, Culture=neutral, PublicKeyToken=4b419c53bdfd4cbf, processorArchitecture=MSIL">
+      <HintPath>..\packages\dbup-core.4.2.0\lib\net45\dbup-core.dll</HintPath>
+    </Reference>
+    <Reference Include="dbup-sqlserver, Version=4.2.0.0, Culture=neutral, PublicKeyToken=4b419c53bdfd4cbf, processorArchitecture=MSIL">
+      <HintPath>..\packages\dbup-sqlserver.4.2.0\lib\net35\dbup-sqlserver.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.2.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.2.0\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah.Contrib.WebApi, Version=1.0.10.25, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elmah.Contrib.WebApi.1.0.10.25\lib\net45\Elmah.Contrib.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.Authorizer, Version=1.3.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.Authorizer.1.3.7\lib\net452\IDP.Authorizer.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.Common, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.Common.1.0.7\lib\net452\IDP.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.DBX, Version=1.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.DBX.1.2.10\lib\net452\IDP.DBX.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.DPL.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.DPL.Library.1.0.0\lib\net452\IDP.DPL.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.Monitor, Version=1.6.37.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.Monitor.1.6.37\lib\net452\IDP.Monitor.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.MSB, Version=1.1.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.MSB.1.1.7\lib\net452\IDP.MSB.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.NSQL.Library, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.NSQL.Library.1.1.3\lib\net452\IDP.NSQL.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Diagnostics.Tracing.EventSource, Version=1.1.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.28\lib\net40\Microsoft.Diagnostics.Tracing.EventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.8.1\lib\net452\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.8.1\lib\net452\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.8.1\lib\net452\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.4.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.4.0\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=3.0.7.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quartz.3.0.7\lib\net452\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <HintPath>..\packages\RabbitMQ.Client.5.1.0\lib\net451\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="SCS.Client.Library, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SCS.Client.Library.1.0.10\lib\net452\SCS.Client.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acquirer.cs" />
+    <Compile Include="Adherence.cs" />
+    <Compile Include="ApprovalListParameter.cs" />
+    <Compile Include="Approval.cs" />
+    <Compile Include="CampaignAdherenceModel.cs" />
+    <Compile Include="CampaignConfiguration.cs" />
+    <Compile Include="CampaignConfigurationContext.cs" />
+    <Compile Include="CampaignPeriods.cs" />
+    <Compile Include="CampaignStatus.cs" />
+    <Compile Include="CampaignType.cs" />
+    <Compile Include="Color.cs" />
+    <Compile Include="DefaultType.cs" />
+    <Compile Include="Discount.cs" />
+    <Compile Include="DTOs\AcquirerViewDTO.cs" />
+    <Compile Include="Answer.cs" />
+    <Compile Include="AssociatedCampaign.cs" />
+    <Compile Include="Authorizer.cs" />
+    <Compile Include="AuthorizerMessageBuilder.cs" />
+    <Compile Include="Brand.cs" />
+    <Compile Include="Campaign.cs" />
+    <Compile Include="CampaignMigration.cs" />
+    <Compile Include="CampaignProfessional.cs" />
+    <Compile Include="DTOs\ApprovalViewDTO.cs" />
+    <Compile Include="DTOs\CampaignApproveDTO.cs" />
+    <Compile Include="DTOs\CampaignDeactivationParameters.cs" />
+    <Compile Include="DTOs\CampaignSubmitApprovalDTO.cs" />
+    <Compile Include="DTOs\CampaignDeclineDTO.cs" />
+    <Compile Include="DTOs\SearchParameters\ActiveAndExpiredCampaignSearchParameters.cs" />
+    <Compile Include="DTOs\SearchParameters\CampaignSearchByProductParameters.cs" />
+    <Compile Include="DTOs\SearchParameters\CouponSearchParameters.cs" />
+    <Compile Include="DTOs\SearchParameters\UserAcquirerSearchParameters.cs" />
+    <Compile Include="DTOs\SearchParameters\UserActiveDeactiveSearchParameter.cs" />
+    <Compile Include="DTOs\SearchParameters\ApprovalSearchParameters.cs" />
+    <Compile Include="DTOs\Views\AcquirerViewDTO.cs" />
+    <Compile Include="DTOs\Views\BrandViewDTO.cs" />
+    <Compile Include="DTOs\Views\CampaignProdutcView.cs" />
+    <Compile Include="DTOs\Views\CampaignView.cs" />
+    <Compile Include="CampaignKit.cs" />
+    <Compile Include="DTOs\CampaignKitDTO.cs" />
+    <Compile Include="DTOs\SearchParameters\CampaignKitSearchParameters.cs" />
+    <Compile Include="DTOs\SearchParameters\CampaignSearchParameters.cs" />
+    <Compile Include="CampaingPendingAprov.cs" />
+    <Compile Include="CampaingPendingAprovParameters.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="ComboBrandCampaign.cs" />
+    <Compile Include="ComboCampaign.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="CompanyProgram.cs" />
+    <Compile Include="DTOs\SearchParameters\CompanyProgramSearchParameters.cs" />
+    <Compile Include="Coupon.cs" />
+    <Compile Include="DTOs\Views\NetworkView.cs" />
+    <Compile Include="DTOs\Views\CampaignViewStatus.cs" />
+    <Compile Include="DTOs\Views\CityView.cs" />
+    <Compile Include="DTOs\ProgramView.cs" />
+    <Compile Include="AdditionalNetworkDiscount.cs" />
+    <Compile Include="DTOs\Views\PermissionViewDTO.cs" />
+    <Compile Include="DTOs\Views\RoleViewDTO.cs" />
+    <Compile Include="DTOs\Views\StateViewDTO.cs" />
+    <Compile Include="DTOs\Views\UserViewDTO.cs" />
+    <Compile Include="ICampaignConfiguration.cs" />
+    <Compile Include="Membership.cs" />
+    <Compile Include="MembershipChannel.cs" />
+    <Compile Include="Modes.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="ModuleKey.cs" />
+    <Compile Include="MonthlyThreshold.cs" />
+    <Compile Include="MontlyProgressiveDiscount.cs" />
+    <Compile Include="Network.cs" />
+    <Compile Include="DTOs\SearchParameters\NetworkSearchParameters.cs" />
+    <Compile Include="Option.cs" />
+    <Compile Include="OptionKey.cs" />
+    <Compile Include="Password.cs" />
+    <Compile Include="Physician.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="DTOs\Views\ProductItem.cs" />
+    <Compile Include="DTOs\SearchParameters\ProductSearchParameters.cs" />
+    <Compile Include="ProductComparer.cs" />
+    <Compile Include="ProgressiveDiscountByUnit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property.cs" />
+    <Compile Include="PropertyKey.cs" />
+    <Compile Include="Question.cs" />
+    <Compile Include="DTOs\Views\QuestionDTO.cs" />
+    <Compile Include="Questionnaire.cs" />
+    <Compile Include="DTOs\SearchParameters\QuestionnaireSearchParameters.cs" />
+    <Compile Include="QuestionnaireCampaignRule.cs" />
+    <Compile Include="RangeKey.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="RoleKey.cs" />
+    <Compile Include="SearchParameters.cs" />
+    <Compile Include="State.cs" />
+    <Compile Include="StateComparer.cs" />
+    <Compile Include="StatusKey.cs" />
+    <Compile Include="Threshold.cs" />
+    <Compile Include="ThresholdControl.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserKey.cs" />
+    <Compile Include="UserPermission.cs" />
+    <Compile Include="UserPermissionKey.cs" />
+    <Compile Include="UserRole.cs" />
+    <Compile Include="UserRoleKey.cs" />
+    <Compile Include="UserRoleType.cs" />
+    <Compile Include="UserSearchParameter.cs" />
+    <Compile Include="DTOs\SearchParameters\UserProfileSearchParameters.cs" />
+    <Compile Include="DTOs\Views\UserResultDTO.cs" />
+    <Compile Include="UserCredentials.cs" />
+    <Compile Include="UserGetListReturn.cs" />
+    <Compile Include="PageableResult.cs" />
+    <Compile Include="ValidationHelper.cs" />
+    <Compile Include="Validators\GenericCompareAttribute.cs" />
+    <Compile Include="Validators\StringRangeAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackOffice.Authorizer.Management.Utilities\BackOffice.Authorizer.Management.Utilities.csproj">
+      <Project>{0DEBC007-83CC-4AAD-BB8C-4C026DD98C3B}</Project>
+      <Name>BackOffice.Authorizer.Management.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Comparators\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.28\build\Microsoft.Diagnostics.Tracing.EventRegister.targets" Condition="Exists('..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.28\build\Microsoft.Diagnostics.Tracing.EventRegister.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.28\build\Microsoft.Diagnostics.Tracing.EventRegister.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.28\build\Microsoft.Diagnostics.Tracing.EventRegister.targets'))" />
+  </Target>
+</Project>
