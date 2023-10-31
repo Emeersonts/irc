@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOffice.Authorizer.Management.API", "BackOffice.Authorizer.Management.API\BackOffice.Authorizer.Management.API.csproj", "{C18F51A0-34F4-483D-89E6-38A8F11351AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOffice.Authorizer.Management.API.Tests", "BackOffice.Authorizer.Management.API.Tests\BackOffice.Authorizer.Management.API.Tests.csproj", "{68F075AC-A60A-47D9-A887-A14C6C3BE83A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOffice.Authorizer.Management.Core", "BackOffice.Authorizer.Management.Core\BackOffice.Authorizer.Management.Core.csproj", "{C744F7F9-66B3-45A9-96D5-BD627D74C1BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOffice.Authorizer.Management.Core.Api", "BackOffice.Authorizer.Management.Core.Api\BackOffice.Authorizer.Management.Core.Api.csproj", "{C4CBE9EB-05F2-4006-8D77-40B4F62C834F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOffice.Authorizer.Management.Domains", "BackOffice.Authorizer.Management.Domains\BackOffice.Authorizer.Management.Domains.csproj", "{44CF7AF7-7F41-4F32-86B1-5CC4E144AE8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOffice.Authorizer.Management.I18N", "BackOffice.Authorizer.Management.I18N\BackOffice.Authorizer.Management.I18N.csproj", "{D38240E9-7AE1-44DA-9E13-121CDCB226AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOffice.Authorizer.Management.Persistence", "BackOffice.Authorizer.Management.Persistence\BackOffice.Authorizer.Management.Persistence.csproj", "{8EEF78F9-0B5B-425A-8932-41AC2605CD73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOffice.Authorizer.Management.Persistence.Api", "BackOffice.Authorizer.Management.Persistence.Api\BackOffice.Authorizer.Management.Persistence.Api.csproj", "{A41FAC2D-B704-4A35-8F01-E7445F8EBCDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOffice.Authorizer.Management.Scripts", "BackOffice.Authorizer.Management.Scripts\BackOffice.Authorizer.Management.Scripts.csproj", "{571498B7-34BF-44BF-8D30-6A78A80B67FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOffice.Authorizer.Management.Utilities", "BackOffice.Authorizer.Management.Utilities\BackOffice.Authorizer.Management.Utilities.csproj", "{0DEBC007-83CC-4AAD-BB8C-4C026DD98C3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C18F51A0-34F4-483D-89E6-38A8F11351AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C18F51A0-34F4-483D-89E6-38A8F11351AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C18F51A0-34F4-483D-89E6-38A8F11351AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C18F51A0-34F4-483D-89E6-38A8F11351AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68F075AC-A60A-47D9-A887-A14C6C3BE83A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68F075AC-A60A-47D9-A887-A14C6C3BE83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68F075AC-A60A-47D9-A887-A14C6C3BE83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68F075AC-A60A-47D9-A887-A14C6C3BE83A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C744F7F9-66B3-45A9-96D5-BD627D74C1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C744F7F9-66B3-45A9-96D5-BD627D74C1BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C744F7F9-66B3-45A9-96D5-BD627D74C1BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C744F7F9-66B3-45A9-96D5-BD627D74C1BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4CBE9EB-05F2-4006-8D77-40B4F62C834F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4CBE9EB-05F2-4006-8D77-40B4F62C834F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4CBE9EB-05F2-4006-8D77-40B4F62C834F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4CBE9EB-05F2-4006-8D77-40B4F62C834F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44CF7AF7-7F41-4F32-86B1-5CC4E144AE8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44CF7AF7-7F41-4F32-86B1-5CC4E144AE8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44CF7AF7-7F41-4F32-86B1-5CC4E144AE8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44CF7AF7-7F41-4F32-86B1-5CC4E144AE8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D38240E9-7AE1-44DA-9E13-121CDCB226AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D38240E9-7AE1-44DA-9E13-121CDCB226AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D38240E9-7AE1-44DA-9E13-121CDCB226AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D38240E9-7AE1-44DA-9E13-121CDCB226AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EEF78F9-0B5B-425A-8932-41AC2605CD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EEF78F9-0B5B-425A-8932-41AC2605CD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EEF78F9-0B5B-425A-8932-41AC2605CD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EEF78F9-0B5B-425A-8932-41AC2605CD73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A41FAC2D-B704-4A35-8F01-E7445F8EBCDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41FAC2D-B704-4A35-8F01-E7445F8EBCDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41FAC2D-B704-4A35-8F01-E7445F8EBCDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41FAC2D-B704-4A35-8F01-E7445F8EBCDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{571498B7-34BF-44BF-8D30-6A78A80B67FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{571498B7-34BF-44BF-8D30-6A78A80B67FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{571498B7-34BF-44BF-8D30-6A78A80B67FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{571498B7-34BF-44BF-8D30-6A78A80B67FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DEBC007-83CC-4AAD-BB8C-4C026DD98C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DEBC007-83CC-4AAD-BB8C-4C026DD98C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DEBC007-83CC-4AAD-BB8C-4C026DD98C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DEBC007-83CC-4AAD-BB8C-4C026DD98C3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D3C3E28-E927-460A-A869-DB05568A37A6}
+	EndGlobalSection
+EndGlobal
