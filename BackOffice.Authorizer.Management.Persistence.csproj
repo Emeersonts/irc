@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8EEF78F9-0B5B-425A-8932-41AC2605CD73}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BackOffice.Authorizer.Management.Persistence</RootNamespace>
+    <AssemblyName>BackOffice.Authorizer.Management.Persistence</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="App.Metrics, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.3.0.0\lib\net452\App.Metrics.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Abstractions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Abstractions.3.0.0\lib\net45\App.Metrics.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Concurrency, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Concurrency.2.0.1\lib\net45\App.Metrics.Concurrency.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Core.3.0.0\lib\net452\App.Metrics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Formatters.Ascii, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Formatters.Ascii.3.0.0\lib\net452\App.Metrics.Formatters.Ascii.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Formatters.Json, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Formatters.Json.3.0.0\lib\net452\App.Metrics.Formatters.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Formatters.Prometheus, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Formatters.Prometheus.3.0.0\lib\net452\App.Metrics.Formatters.Prometheus.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.2.1.0\lib\net452\App.Metrics.Health.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Abstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Abstractions.2.1.0\lib\net452\App.Metrics.Health.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Checks.Http, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Checks.Http.2.1.0\lib\net452\App.Metrics.Health.Checks.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Checks.Network, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Checks.Network.2.1.0\lib\net452\App.Metrics.Health.Checks.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Checks.Process, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Checks.Process.2.1.0\lib\net452\App.Metrics.Health.Checks.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Checks.Sql, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Checks.Sql.2.1.0\lib\net452\App.Metrics.Health.Checks.Sql.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Core, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Core.2.1.0\lib\net452\App.Metrics.Health.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Formatters.Ascii, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Formatters.Ascii.2.1.0\lib\net452\App.Metrics.Health.Formatters.Ascii.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Metrics.Health.Formatters.Json, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0d5193a913d1b812, processorArchitecture=MSIL">
+      <HintPath>..\packages\App.Metrics.Health.Formatters.Json.2.1.0\lib\net452\App.Metrics.Health.Formatters.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac, Version=4.9.4.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.4\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Consul, Version=0.7.2.6, Culture=neutral, PublicKeyToken=20a6ad9a81df1d95, processorArchitecture=MSIL">
+      <HintPath>..\packages\Consul.0.7.2.6\lib\net45\Consul.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.1\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.Contrib.1.60.1\lib\net451\Dapper.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="dbup-core, Version=4.2.0.0, Culture=neutral, PublicKeyToken=4b419c53bdfd4cbf, processorArchitecture=MSIL">
+      <HintPath>..\packages\dbup-core.4.2.0\lib\net45\dbup-core.dll</HintPath>
+    </Reference>
+    <Reference Include="dbup-sqlserver, Version=4.2.0.0, Culture=neutral, PublicKeyToken=4b419c53bdfd4cbf, processorArchitecture=MSIL">
+      <HintPath>..\packages\dbup-sqlserver.4.2.0\lib\net35\dbup-sqlserver.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.2.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.2.0\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah.Contrib.WebApi, Version=1.0.10.25, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elmah.Contrib.WebApi.1.0.10.25\lib\net45\Elmah.Contrib.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="GenericDatabaseAccess, Version=0.0.0.1, Culture=neutral, PublicKeyToken=dfb2b433f781e525, processorArchitecture=MSIL">
+      <HintPath>..\packages\GenericDatabaseAccess.1.0.0\lib\net452\GenericDatabaseAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="GenericEncryption, Version=0.0.0.1, Culture=neutral, PublicKeyToken=397ce2badd6a896c, processorArchitecture=MSIL">
+      <HintPath>..\packages\GenericDatabaseAccess.1.0.0\lib\net452\GenericEncryption.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.Authorizer, Version=1.3.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.Authorizer.1.3.7\lib\net452\IDP.Authorizer.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.Common, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.Common.1.0.7\lib\net452\IDP.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.DBX, Version=1.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.DBX.1.2.10\lib\net452\IDP.DBX.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.DPL.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.DPL.Library.1.0.0\lib\net452\IDP.DPL.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.Monitor, Version=1.6.37.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.Monitor.1.6.37\lib\net452\IDP.Monitor.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.MSB, Version=1.1.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.MSB.1.1.7\lib\net452\IDP.MSB.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.NSQL.Library, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.NSQL.Library.1.1.3\lib\net452\IDP.NSQL.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Diagnostics.Tracing.EventSource, Version=1.1.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.28\lib\net40\Microsoft.Diagnostics.Tracing.EventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.8.1\lib\net452\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.8.1\lib\net452\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.8.1\lib\net452\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.4.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.4.0\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=3.0.7.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quartz.3.0.7\lib\net452\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <HintPath>..\packages\RabbitMQ.Client.5.1.0\lib\net451\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="SCS.Client.Library, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SCS.Client.Library.1.0.10\lib\net452\SCS.Client.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdherenceRepository.cs" />
+    <Compile Include="AuthenticationRepository.cs" />
+    <Compile Include="ApprovalRepository.cs" />
+    <Compile Include="CampaignPeriodsRepository.cs" />
+    <Compile Include="CampaignRepository.cs" />
+    <Compile Include="CampaingPendingAprovRepository.cs" />
+    <Compile Include="CityRepository.cs" />
+    <Compile Include="ComboRepository.cs" />
+    <Compile Include="CompanyProgramRepository.cs" />
+    <Compile Include="CouponRepository.cs" />
+    <Compile Include="Daos\IndustryDAO.cs" />
+    <Compile Include="Daos\ModuleDAO.cs" />
+    <Compile Include="Daos\PermissionDAO.cs" />
+    <Compile Include="Daos\UserDAO.cs" />
+    <Compile Include="DiscountRepository.cs" />
+    <Compile Include="Entities\AcquirerEntity.cs" />
+    <Compile Include="Entities\AdditionalNetworkDiscountEntity.cs" />
+    <Compile Include="Entities\AdherenceEntity.cs" />
+    <Compile Include="Entities\AnswerDefaultEntity.cs" />
+    <Compile Include="Entities\AnswerEntity.cs" />
+    <Compile Include="Entities\AnswerWeitghtEntity.cs" />
+    <Compile Include="Entities\AssociatedCampaignEntity.cs" />
+    <Compile Include="Entities\BackOfficeUserEntity.cs" />
+    <Compile Include="Entities\CampaignAdherenceEntity.cs" />
+    <Compile Include="Entities\CampaignCouponEntity.cs" />
+    <Compile Include="Entities\CampaignEntity.cs" />
+    <Compile Include="Entities\CampaignKitEntity.cs" />
+    <Compile Include="Entities\CampaignMigrationEntity.cs" />
+    <Compile Include="Entities\CampaignPeriodsEntity.cs" />
+    <Compile Include="Entities\CampaignProfessionalEntity.cs" />
+    <Compile Include="Entities\ComboBrandEntity.cs" />
+    <Compile Include="Entities\ComboCampaignEntity.cs" />
+    <Compile Include="Entities\CouponEntity.cs" />
+    <Compile Include="Entities\DiscountEntity.cs" />
+    <Compile Include="Entities\MembershipEntity.cs" />
+    <Compile Include="Entities\MigrationMappingEntity.cs" />
+    <Compile Include="Entities\ModesEntity.cs" />
+    <Compile Include="Entities\ModuleEntity.cs" />
+    <Compile Include="Entities\MontlyProgressiveDiscountEntity.cs" />
+    <Compile Include="Entities\QuestionEntity.cs" />
+    <Compile Include="Entities\RulesSpecificEntity.cs" />
+    <Compile Include="Entities\PhysicianEntity.cs" />
+    <Compile Include="Entities\ProductEntity.cs" />
+    <Compile Include="Entities\ProgressiveDiscountByUnityEntity.cs" />
+    <Compile Include="Entities\RoleEntity.cs" />
+    <Compile Include="Entities\ThresholdControlEntity.cs" />
+    <Compile Include="Entities\ThresholdEntity.cs" />
+    <Compile Include="Entities\UserEntity.cs" />
+    <Compile Include="Entities\ApprovalEntity.cs" />
+    <Compile Include="Entities\UserIndustryMapEntity.cs" />
+    <Compile Include="Entities\UserPermissionEntity.cs" />
+    <Compile Include="Entities\UserRolePermissionMapEntity.cs" />
+    <Compile Include="Entities\UserRoleAdmEntity.cs" />
+    <Compile Include="Entities\UserRoleEntity.cs" />
+    <Compile Include="Entities\UserRoleMapEntity.cs" />
+    <Compile Include="Entities\UserRoleTypeEntity.cs" />
+    <Compile Include="Factory\AuthorizerConnectionPool.cs" />
+    <Compile Include="Factory\CampaignConfigurationFactory.cs" />
+    <Compile Include="Factory\CampaignEnvironment.cs" />
+    <Compile Include="Factory\ConnectionPooleableFactory.cs" />
+    <Compile Include="Factory\ICampaignConfigurationFactory.cs" />
+    <Compile Include="Infrastructure\SqlServerUpdate.cs" />
+    <Compile Include="KitRepository.cs" />
+    <Compile Include="MembershipChannelRepository.cs" />
+    <Compile Include="MembershiprRepository.cs" />
+    <Compile Include="ModesRepository.cs" />
+    <Compile Include="NetworkRepository.cs" />
+    <Compile Include="PhysicianRepository.cs" />
+    <Compile Include="ProductRepository.cs" />
+    <Compile Include="ProgressiveDiscountRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionnaireRepository.cs" />
+    <Compile Include="StateRepository.cs" />
+    <Compile Include="ThresholdControlRepository.cs" />
+    <Compile Include="UserProfileRepository.cs" />
+    <Compile Include="Util\SqlConnectionStringUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <EmbeddedResource Include="Infrastructure\Scripts\34-Create-Table-ApproverStatus.sql" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Readme\Elmah.txt" />
+    <EmbeddedResource Include="Infrastructure\Scripts\57-Create-Table-Module.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\58-Create-Table-Option.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\59-Create-Table-ModulePermissionMap.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\60-Create-Table-ModuleOptions.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\61-Create-Table-Property.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\62-Create-Table-ModuleOptionPropertyMap.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\33-Alter-column-user.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\35-Create-Table-Modes.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\36-Create-Table-ThresholdControl.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\37-Create-Table-Adherence.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\39-Create-Table-Discount.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\38-Create-Table-CampaignPeriods.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\40-Create-Table-Membership.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\41-Create-Table-UserRolePermissionMap.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\42-Create-Table-Aux_Rules_Coupon.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\43-Create-Table-UserPermission.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\44-Create-Table-Migration-Mapping.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\50-Create-Table-UserIndustryMap.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\45-Create-Table-Questionnaire-Mapping.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\46-Create-Table-UserRoleType.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\56-FunctionChangeIsValidRules_Prd.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\52-Create-Table-BackOfficUser.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\49-Create-Table-Str_Social_Economic.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\51-Create-Table-UserRole.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\47-Create-Table-UserRoleMap.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\48-CONSTRAINT BackOfficUser.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\53-Create-Table-RolePermissionMap.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\54-Create-Table-Str_Multi_Table.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\55-ScriptUpdateUserColumns.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\02-Create-Table-AdmColorSchema.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\03-Create-Table-ApprovalRequest.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\01-Create-Table-ColorSchema.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\07-Create-Table-Prd_MsFile.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\26-Create-Table-Pub_Str_Holder_Answers.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\24-Create-Table-Pub_Str_Holder_AnswersDefault.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\23-Create-Table-Pub_Str_Holder_Questions.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\10-Create-Table-Rules_AdherenceModel.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\11-Create-Table-Rules_Append.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\12-Create-Table-Rules_Coupon.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\14-Create-Table-Rules_Migration.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\13-Create-Table-Rules_MixPrdBrand.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\15-Create-Table-Rules_MixPrdEAN.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\08-Create-Table-Rules_MsFile.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\16-Create-Table-Rules_MsFile_Specific.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\17-Create-Table-Rules_MultiPrd.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\21-Create-Table-Rules_MultiPrd_Month.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\09-Create-Table-Rules_Prd.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\18-Create-Table-Rules_PrdFlag.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\19-Create-Table-Rules_PrdNewKit.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\20-Create-Table-Rules_Profess.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\22-Create-Table-Rules_ProfessDetail.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\28-Create-Table-Str_Acct_Parms.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\27-Create-Table-Str_Activity_Type.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\29-Create-Table-Str_ZIP_City.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\30-Create-Table-Str_ZIP_State.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\04-Create-Table-User.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\05-Create-Table-User_Roles.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\06-Create-Table-User_Role_Adm.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\25-Create-Function-Sf_GetAllAnswers.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\31-Create-Function-Sf_getExistsPrdBrand.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\32-Create-Function-Sf_IsValid_Rules_Prd.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackOffice.Authorizer.Management.Domains\BackOffice.Authorizer.Management.Domains.csproj">
+      <Project>{44cf7af7-7f41-4f32-86b1-5cc4e144ae8b}</Project>
+      <Name>BackOffice.Authorizer.Management.Domains</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BackOffice.Authorizer.Management.Persistence.Api\BackOffice.Authorizer.Management.Persistence.Api.csproj">
+      <Project>{a41fac2d-b704-4a35-8f01-e7445f8ebcda}</Project>
+      <Name>BackOffice.Authorizer.Management.Persistence.Api</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.28\build\Microsoft.Diagnostics.Tracing.EventRegister.targets" Condition="Exists('..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.28\build\Microsoft.Diagnostics.Tracing.EventRegister.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.28\build\Microsoft.Diagnostics.Tracing.EventRegister.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.28\build\Microsoft.Diagnostics.Tracing.EventRegister.targets'))" />
+  </Target>
+</Project>
