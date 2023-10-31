@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{571498B7-34BF-44BF-8D30-6A78A80B67FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BackOffice.Authorizer.Management.Scripts</RootNamespace>
+    <AssemblyName>BackOffice.Authorizer.Management.Scripts</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.1\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.Contrib.1.60.1\lib\net451\Dapper.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="dbup-core, Version=4.2.0.0, Culture=neutral, PublicKeyToken=4b419c53bdfd4cbf, processorArchitecture=MSIL">
+      <HintPath>..\packages\dbup-core.4.2.0\lib\net45\dbup-core.dll</HintPath>
+    </Reference>
+    <Reference Include="dbup-sqlserver, Version=4.2.0.0, Culture=neutral, PublicKeyToken=4b419c53bdfd4cbf, processorArchitecture=MSIL">
+      <HintPath>..\packages\dbup-sqlserver.4.2.0\lib\net35\dbup-sqlserver.dll</HintPath>
+    </Reference>
+    <Reference Include="IDP.DBX, Version=1.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IDP.DBX.1.2.10\lib\net452\IDP.DBX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Infrastructure\DefaultSqlServerUpdate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Infrastructure\Scripts\01-InsertProcedures.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\02-LGX_FunctionChangeIsValidRules_Prd.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\03-ScriptUpdateUserColumns.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\04-LGX_Procedure SP_LEVEL3_IRC_Associ.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\06-LGX_Procedure SP_LEVEL3_IRC_InsDescMes.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\07-LGX_Procedure SP_LEVEL3_IRC_InsDescUnit.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\08-LGX_Procedure SP_LEVEL3_IRC_InserirAdesao.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\09-LGX_Procedure SP_LEVEL3_IRC_InserirCampanha.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\10-LGX_Procedure SP_LEVEL3_IRC_InserirComboB.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\11-LGX_Procedure SP_LEVEL3_IRC_InserirCombos.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\12-LGX_Procedure SP_LEVEL3_IRC_InserirDescRede.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\13-LGX_Procedure SP_LEVEL3_IRC_InserirKits.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\14-LGX_Procedure SP_LEVEL3_IRC_InserirMedicos.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\15-LGX_Procedure SP_LEVEL3_IRC_InserirMigracoes.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\16-LGX_Procedure SP_LEVEL3_IRC_InserirPatamares.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\17-LGX_Procedure SP_LEVEL3_IRC_InserirProdutos.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\18-LGX_Procedure SP_LEVEL3_IRC_InserirProfess.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\19-LGX_Procedure SP_LEVEL3_IRC_InserirQuestao.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\20-LGX_Procedure SP_LEVEL3_IRC_InserirRedes.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\21-LGX_Procedure SP_LEVEL3_IRC_INSResposta.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\22-LGX_Procedure SP_LEVEL3_IRC_INSRespostaD.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\23-LGX_Procedure SP_LEVEL3_IRC_InsRQuestionario.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\24-LGX_Procedure SP_LEVEL3_IRC_LimparCampanha.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\25-LGX_Procedure SP_LEVEL3_IRC_OnOffCampanha.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\26-LGX_Procedure SP_LEVEL3_IRC_UpdCupom.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\27-ScriptCreateMigrationMappingTable.sql" />
+    <EmbeddedResource Include="Infrastructure\Scripts\28-ScriptCreateQuestionnaireMapping.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
